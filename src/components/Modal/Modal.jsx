@@ -10,8 +10,8 @@ export const Modal = ({ user, largeImg, onClose }) => {
       if (e.code === 'Escape') {
         onClose();
       }
-      window.addEventListener('keydown', onCloseByEsc);
     };
+    window.addEventListener('keydown', onCloseByEsc);
     return () => {
       window.removeEventListener('keydown', onCloseByEsc);
     };
