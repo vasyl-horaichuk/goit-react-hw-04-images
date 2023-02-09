@@ -17,12 +17,17 @@ export const App = () => {
     if (!newQuery || newQuery === query) {
       return;
     }
-    setQuery(query);
+    setImages([]);
+    setQuery(newQuery);
     setPage(1);
     setIsLoading(true);
   };
 
   useEffect(() => {
+    if (!query) {
+      return;
+    }
+
     fetchImages(query, page)
       .then(response => {
         setImages(prevImages => {
