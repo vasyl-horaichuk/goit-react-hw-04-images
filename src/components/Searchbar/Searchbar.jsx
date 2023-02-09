@@ -1,4 +1,5 @@
 import { FiSearch } from 'react-icons/fi';
+import PropTypes from 'prop-types';
 import {
   Search,
   SearchForm,
@@ -31,4 +32,8 @@ export const Searchbar = ({ onSubmit }) => {
       </SearchForm>
     </Search>
   );
+};
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };

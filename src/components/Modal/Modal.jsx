@@ -11,7 +11,9 @@ export const Modal = ({ user, largeImg, onClose }) => {
         onClose();
       }
     };
+
     window.addEventListener('keydown', onCloseByEsc);
+
     return () => {
       window.removeEventListener('keydown', onCloseByEsc);
     };
